@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
-import kotlinx.coroutines.delay
 
-class splashscreen : AppCompatActivity() {
+
+class Splashscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
@@ -17,7 +17,7 @@ class splashscreen : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         Handler(Looper.getMainLooper()).postDelayed({
-            val intentt = Intent (this, MainActivity::class.java)
+            val intent = Intent (this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 4000)
